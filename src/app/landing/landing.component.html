@@ -1,0 +1,62 @@
+<app-responsive-layout>
+
+  <!-- header small screen -->
+  <div class="w-100" content-header-sm>
+    <app-header></app-header>
+  </div>
+  <!-- /header small screen -->
+
+  <!-- header large screen -->
+  <div class="w-100" content-header>
+    <app-header></app-header>
+  </div>
+  <!-- header large screen -->
+
+  <!-- side bar -->
+  <div class="h-100" content-sidenav>
+    <app-side-bar></app-side-bar>
+  </div>
+  <!-- /side bar -->
+
+
+
+  <div content-router-outlet>
+
+    <!-- <router-outlet></router-outlet> -->
+
+    <!-- content -->
+    <div class="container">
+      <div class="content-box">
+
+        <!-- segment list -->
+        <div *ngFor="let segment of segmentList; let i = index">
+          <div class="segment-item">
+            <ngx-emoji [emoji]="segment.icon.colons" [size]="31"></ngx-emoji>
+            <span class="font-30px text-black ml-18px pb-5px">
+              {{segment.segmentName}}
+            </span>
+          </div>
+
+          <div class="table-list">
+
+            <!-- table list -->
+            <div *ngFor="let item of segment.tableList">
+              <app-table-item [tableItem]="item"></app-table-item>
+            </div>
+            <!-- /table list -->
+
+            <!-- add table -->
+            <app-add-table-icon [segmentIndex]="i"></app-add-table-icon>
+            <!-- /add table -->
+
+          </div>
+        </div>
+        <!-- /segment list -->
+
+      </div>
+    </div>
+    <!-- /content -->
+
+  </div>
+
+</app-responsive-layout>

@@ -1,0 +1,10 @@
+<div class="mr-50px">
+  <div class="table-item" [ngStyle]="{'border-color': tableItem.color}">
+    <ngx-emoji [emoji]="tableItem.icon.colons" [size]="31"></ngx-emoji>
+
+    <span class="color-indicator" [ngStyle]="{'background-color': tableItem.color}"></span>
+  </div>
+  <div class="table-item-name">
+    {{tableItem.tableName}}
+  </div>
+</div>

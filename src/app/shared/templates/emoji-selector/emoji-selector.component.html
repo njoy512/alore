@@ -1,0 +1,10 @@
+<div class="input-container">
+  <div class="custom-input custom-input-lg" (click)="toggle = !toggle">
+    <div class="emoji-input">
+      <ngx-emoji [emoji]="icon.colons" [size]="25"></ngx-emoji>
+      <img height="8" src="assets/images/dropdown.svg" alt="">
+    </div>
+  </div> 
+
+  <emoji-mart class="emoji-panel" *ngIf="toggle" (emojiSelect)="change($event)"></emoji-mart>
+</div>

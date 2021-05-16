@@ -1,0 +1,46 @@
+<div class="modal-body">
+
+  <div class="close-modal">
+    <img height="12" src="assets/images/close.svg" alt="">
+  </div>
+
+  <div class="text-dark-grey font-22px">
+    Add a table
+  </div>
+
+  <!-- inputs -->
+  <div class="my-40px">
+
+    <div class="mb-30px">
+      <div class="text-dark-grey font-16px mb-10px">Name*</div>
+      <input type="text" class="custom-input custom-input-lg" [value]="name" (input)="nameChangeEvent($event)"
+        placeholder="Ex: Computer Software" required>
+    </div>
+
+    <!-- <div class="mb-30px">
+      <div class="text-dark-grey font-16px mb-10px">Icon</div>
+      <app-emoji-selector (selectEvent)="iconChangeEvent($event)"></app-emoji-selector>
+    </div> -->
+
+    <div class="mb-30px color-picker-box">
+      <div class="text-dark-grey font-16px mb-10px">Color</div>
+      <div type="text" class="custom-input custom-input-lg">
+        <div class="color-input">
+          <div [ngStyle]="{'background': color}" class="color-circle">
+          </div>
+          <img height="8" src="assets/images/dropdown.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="color-list">
+      <div *ngFor="let item of colorList" class="mr-10px">
+        <div [ngStyle]="{'background': color}" class="color-circle">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /inputs -->
+
+</div>

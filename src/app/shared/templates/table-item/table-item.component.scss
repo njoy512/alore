@@ -1,0 +1,35 @@
+.table-item {
+  background: #FFFFFF;
+  border: 2px solid #EA5A47;
+  border-radius: 10px;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.color-indicator {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background: #EA5A47;
+  position: absolute;
+  top: 7px;
+  right: 11px;
+}
+
+.table-item-name {
+  color: #181818;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 10px;
+  width: 81px;
+  word-break: break-all;
+}
+
+.mr-50px {
+  margin-right: 50px;
+}

@@ -1,0 +1,50 @@
+.modal-body {
+  position: relative;
+  padding: 16px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.my-40px {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.mb-10px {
+  margin-bottom: 10px;
+}
+
+.mb-30px {
+  margin-bottom: 30px;
+}
+
+.color-picker-box {
+  position: relative;
+}
+
+.color-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.color-list {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100px;
+  overflow-y: auto;
+}
+
+.mr-10px {
+  margin-right: 10px;
+}

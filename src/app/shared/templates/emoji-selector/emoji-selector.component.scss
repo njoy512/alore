@@ -1,0 +1,14 @@
+.emoji-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-container {
+  position: relative;
+}
+
+.emoji-panel {
+  position: absolute;
+  top: 42px;
+}

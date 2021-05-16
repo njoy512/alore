@@ -1,0 +1,66 @@
+.right-strip {
+  background: #F1F1F1;
+  flex-grow: 1;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.left-strip {
+  background: #E8E8E8;
+  width: 70px;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-box {
+  display: flex;
+  height: 100%;
+}
+
+.py-20px {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.px-12px {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.side-heading {
+  padding: 0 30px 30px 30px;
+}
+
+.segment-section {
+  margin: 10px 20px;
+
+}
+
+.segment-item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.btn-tray {
+  padding: 10px 12px 0 12px;
+}
+
+.segment-scroll {
+  height: calc(100vh - 295px);
+  overflow-y: auto;
+}
+
+.ml-10px {
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .segment-scroll {
+    height: calc(100vh - 355px);
+  }
+}
