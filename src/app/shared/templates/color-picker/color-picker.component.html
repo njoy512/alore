@@ -1,0 +1,21 @@
+<div class="color-picker-box">
+  <div type="text" class="custom-input custom-input-lg py-7px" (click)="isOpen = !isOpen" cdkOverlayOrigin
+    #trigger="cdkOverlayOrigin">
+    <div class="color-input">
+      <div [ngStyle]="{'background': color}" class="color-circle">
+      </div>
+      <img height="8" src="assets/images/dropdown.svg" alt="">
+    </div>
+  </div>
+</div>
+
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen"
+  [cdkConnectedOverlayHasBackdrop]="true" cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop"
+  (backdropClick)="isOpen = false">
+  <div class="color-list">
+    <div *ngFor="let item of colorList" class="p-5px">
+      <div (click)="selectColor(item)" [ngStyle]="{'background': item}" class="color-circle cursor-pointer">
+      </div>
+    </div>
+  </div>
+</ng-template>

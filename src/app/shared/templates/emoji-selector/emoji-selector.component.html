@@ -1,10 +1,15 @@
-<div class="input-container">
-  <div class="custom-input custom-input-lg" (click)="toggle = !toggle">
+<div>
+  <div class="custom-input custom-input-lg py-7px" (click)="isOpen = !isOpen" cdkOverlayOrigin
+    #trigger="cdkOverlayOrigin">
     <div class="emoji-input">
       <ngx-emoji [emoji]="icon.colons" [size]="25"></ngx-emoji>
       <img height="8" src="assets/images/dropdown.svg" alt="">
     </div>
-  </div> 
+  </div>
 
-  <emoji-mart class="emoji-panel" *ngIf="toggle" (emojiSelect)="change($event)"></emoji-mart>
+  <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen"
+    [cdkConnectedOverlayHasBackdrop]="true" cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop"
+    (backdropClick)="isOpen = false">
+    <emoji-mart class="emoji-panel" (emojiSelect)="change($event)"></emoji-mart>
+  </ng-template>
 </div>

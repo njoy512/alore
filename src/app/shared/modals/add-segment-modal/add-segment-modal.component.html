@@ -1,1 +1,52 @@
-<p>add-segment-modal works!</p>
+<div class="modal-body">
+
+  <div class="close-modal">
+    <img (click)="onNoClick()" height="12" src="assets/images/close.svg" alt="" class="cursor-pointer">
+  </div>
+
+  <div class="text-dark-grey font-22px">
+    Add a segment
+  </div>
+
+  <!-- inputs -->
+  <div class="my-40px">
+
+    <div class="mb-30px">
+      <div class="text-dark-grey font-16px mb-10px">Name*</div>
+      <input type="text" class="custom-input custom-input-lg" [value]="name" (input)="nameChangeEvent($event)"
+        placeholder="Ex: Computer Software" required>
+    </div>
+
+    <div class="mb-30px">
+      <div class="text-dark-grey font-16px mb-10px">Icon</div>
+      <app-emoji-selector (selectEvent)="iconChangeEvent($event)"></app-emoji-selector>
+    </div>
+
+    <div class="mb-30px">
+      <div class="text-dark-grey font-16px mb-10px">Description</div>
+      <!-- <input type="text" class="custom-input custom-input-lg" [value]="desc" (input)="descChangeEvent($event)"
+        placeholder="Ex: Computer Software" required> -->
+      <textarea class="custom-textarea" [value]="desc" (input)="descChangeEvent($event)"
+        required></textarea>
+    </div>
+
+  </div>
+  <!-- /inputs -->
+
+  <!-- buttons -->
+  <div class="btn-tray">
+    <button *ngIf="name != '' && desc != ''" (click)="submit()" class="btn btn-primary w-150px mr-15px">
+      Add
+    </button>
+
+    <button *ngIf="name == '' || desc == ''" class="btn btn-grey w-150px mr-15px">
+      Add
+    </button>
+
+    <button (click)="onNoClick()" class="btn btn-primary-outline w-150px">
+      Cancel
+    </button>
+  </div>
+  <!-- buttons -->
+
+</div>

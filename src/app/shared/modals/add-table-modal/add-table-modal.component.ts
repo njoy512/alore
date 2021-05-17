@@ -13,7 +13,7 @@ export class AddTableModalComponent implements OnInit {
 
   segmentIndex: any;
 
-  color = '';
+  color = 'rgba(238, 238, 238, 1)';
   icon = {
     id: 'santa',
     name: 'Father Christmas',
@@ -63,21 +63,25 @@ export class AddTableModalComponent implements OnInit {
 
   iconChangeEvent(event: any) {
     // console.log(event.target.value);
-    this.name = event.emoji;
+    this.icon = event.emoji;
   }
 
   colorChangeEvent(event: any) {
     // console.log(event.target.value);
-    this.name = event.target.value;
+    this.color = event;
   }
 
   submit() {
-    let data = {
-      color: this.color,
-      icon: this.icon,
-      name: this.name
+    if (this.name != '') {
+      let data = {
+        color: this.color,
+        icon: this.icon,
+        tableName: this.name
+      }
+      console.log(data);
+      this.addTable(data, this.segmentIndex);
+      this.onNoClick();
     }
-    this.addTable(data, this.segmentIndex);
   }
 
   // Close dailog

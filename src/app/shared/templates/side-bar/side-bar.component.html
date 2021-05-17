@@ -39,7 +39,7 @@
       </div>
 
       <div class="segment-scroll">
-        <div *ngFor="let segment of segmentList" class="segment-item">
+        <div *ngFor="let segment of segmentList2" class="segment-item">
           <ngx-emoji [emoji]="segment.icon.colons" [size]="17"></ngx-emoji>
           <span class="font-14px text-black ml-10px">
             {{segment.segmentName}}
@@ -52,7 +52,7 @@
     <!-- /search & list segments -->
 
     <div class="btn-tray">
-      <button class="btn btn-sm btn-primary w-100">
+      <button (click)="gotoAddSegment()" class="btn btn-sm btn-primary w-100">
         + Add a segment
       </button>
     </div>

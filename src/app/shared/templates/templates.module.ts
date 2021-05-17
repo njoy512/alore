@@ -10,6 +10,8 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { AddTableIconComponent } from './add-table-icon/add-table-icon.component';
 import { TableItemComponent } from './table-item/table-item.component';
 import { EmojiSelectorComponent } from './emoji-selector/emoji-selector.component';
+import { ColorPickerComponent } from './color-picker/color-picker.component';
+import { ModalsModule } from '../modals/modals.module';
 
 
 
@@ -20,13 +22,15 @@ import { EmojiSelectorComponent } from './emoji-selector/emoji-selector.componen
     SideBarComponent,
     AddTableIconComponent,
     TableItemComponent,
-    EmojiSelectorComponent
+    EmojiSelectorComponent,
+    ColorPickerComponent
   ],
   imports: [
     CommonModule,
     MaterialModule,
     PickerModule,
-    EmojiModule
+    EmojiModule,
+    // ModalsModule
   ],
   exports: [
     MaterialModule,
@@ -37,7 +41,8 @@ import { EmojiSelectorComponent } from './emoji-selector/emoji-selector.componen
     SideBarComponent,
     AddTableIconComponent,
     TableItemComponent,
-    EmojiSelectorComponent
+    EmojiSelectorComponent,
+    ColorPickerComponent
   ]
 })
 export class TemplatesModule { }

@@ -19,7 +19,7 @@ export class EmojiSelectorComponent implements OnInit {
   };
   @Output() selectEvent = new EventEmitter<any>();
 
-  toggle = false;
+  isOpen = false;
 
   constructor() { }
 
@@ -29,7 +29,8 @@ export class EmojiSelectorComponent implements OnInit {
   change(event: any) {
     // this.selectEvent.emit(event.emoji);
     this.selectEvent.emit(event);
-    this.toggle = false;
+    this.isOpen = false;
+    this.icon = event.emoji;
   }
 
 }

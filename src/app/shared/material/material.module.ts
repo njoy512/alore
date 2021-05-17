@@ -5,7 +5,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 
 
@@ -18,7 +20,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatToolbarModule,
     MatListModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule,
+    OverlayModule
   ],
   exports: [
     MatIconModule,
@@ -26,7 +30,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatToolbarModule,
     MatListModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule,
+    OverlayModule
   ]
 })
 export class MaterialModule { }

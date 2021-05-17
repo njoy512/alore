@@ -1,0 +1,56 @@
+.modal-body {
+  position: relative;
+  padding: 16px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.my-40px {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.mb-10px {
+  margin-bottom: 10px;
+}
+
+.mb-30px {
+  margin-bottom: 30px;
+}
+
+.mr-15px {
+  margin-right: 15px;
+}
+
+.w-150px {
+  width: 150px;
+}
+
+.btn-tray {
+  display: flex;
+  margin-top: 80px;
+}
+
+.custom-textarea {
+  resize: none;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3C3C3C;
+  width: 100%;
+  height: 125px;
+  padding: 10px;
+}
+
+.custom-textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 2px solid #334BFA;
+}

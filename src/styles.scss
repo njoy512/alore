@@ -89,6 +89,7 @@ body {
   font-weight: 700;
   box-sizing: border-box;
   cursor: pointer;
+  outline: none;
 }
 
 .btn-sm {
@@ -97,6 +98,12 @@ body {
 
 .btn-primary {
   background-color: #334BFA;
+  color: white;
+  border: none;
+}
+
+.btn-grey {
+  background: rgba(60, 60, 60, 0.5);
   color: white;
   border: none;
 }
@@ -156,4 +163,8 @@ body {
   outline: none !important;
   box-shadow: none !important;
   border: 2px solid #334BFA;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

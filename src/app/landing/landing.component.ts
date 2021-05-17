@@ -93,7 +93,7 @@ export class LandingComponent implements OnInit {
       } else if (message.data.action == 'table') {
         this.updateTableList(message.data.item, message.data.index);
       }
-      console.log(this.segmentList);
+      // console.log(this.segmentList);
     });
   }
 
@@ -106,7 +106,9 @@ export class LandingComponent implements OnInit {
 
   // to update tableList
   updateTableList(tableItem: any, segmentIndex: number) {
+    console.log(tableItem, segmentIndex);
     this.segmentList[segmentIndex].tableList.push(tableItem);
+    console.log(this.segmentList);
   }
 
   addSegment(segmentItem: any) {
@@ -124,17 +126,6 @@ export class LandingComponent implements OnInit {
       index: segmentIndex
     }
     this.messageService.sendMessage(data);
-  }
-
-  gotoAddTable(segmentIndex: number): void {
-    const dialogRef = this.dialog.open(AddTableModalComponent, {
-      width: '700px',
-      data: { index: segmentIndex }
-    });
-
-    dialogRef.afterClosed().subscribe((result: any) => {
-
-    });
   }
 
 }

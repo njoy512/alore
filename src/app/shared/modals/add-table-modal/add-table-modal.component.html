@@ -1,7 +1,7 @@
 <div class="modal-body">
 
   <div class="close-modal">
-    <img height="12" src="assets/images/close.svg" alt="">
+    <img (click)="onNoClick()" height="12" src="assets/images/close.svg" alt="" class="cursor-pointer">
   </div>
 
   <div class="text-dark-grey font-22px">
@@ -17,30 +17,33 @@
         placeholder="Ex: Computer Software" required>
     </div>
 
-    <!-- <div class="mb-30px">
+    <div class="mb-30px">
       <div class="text-dark-grey font-16px mb-10px">Icon</div>
       <app-emoji-selector (selectEvent)="iconChangeEvent($event)"></app-emoji-selector>
-    </div> -->
+    </div>
 
     <div class="mb-30px color-picker-box">
       <div class="text-dark-grey font-16px mb-10px">Color</div>
-      <div type="text" class="custom-input custom-input-lg">
-        <div class="color-input">
-          <div [ngStyle]="{'background': color}" class="color-circle">
-          </div>
-          <img height="8" src="assets/images/dropdown.svg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <div class="color-list">
-      <div *ngFor="let item of colorList" class="mr-10px">
-        <div [ngStyle]="{'background': color}" class="color-circle">
-        </div>
-      </div>
+      <app-color-picker (selectEvent)="colorChangeEvent($event)"></app-color-picker>
     </div>
 
   </div>
   <!-- /inputs -->
+
+  <!-- buttons -->
+  <div class="btn-tray">
+    <button *ngIf="name != ''" (click)="submit()" class="btn btn-primary w-150px mr-15px">
+      Add
+    </button>
+
+    <button *ngIf="name == ''" class="btn btn-grey w-150px mr-15px">
+      Add
+    </button>
+
+    <button (click)="onNoClick()" class="btn btn-primary-outline w-150px">
+      Cancel
+    </button>
+  </div>
+  <!-- buttons -->
 
 </div>
