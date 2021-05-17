@@ -33,4 +33,9 @@ export class ListSegmentsComponent implements OnInit {
     console.log(this.segmentList);
   }
 
+  ngOnDestroy() {
+    // unsubscribe to ensure no memory leaks
+    this.subscription.unsubscribe();
+  }
+
 }

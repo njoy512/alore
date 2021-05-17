@@ -168,3 +168,22 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
+
+::-webkit-scrollbar {
+  width: 4px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E9E9E9 !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #E9E9E9 !important;
+}

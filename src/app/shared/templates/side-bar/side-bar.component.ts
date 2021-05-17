@@ -87,7 +87,9 @@ export class SideBarComponent implements OnInit {
     });
   }
 
-  // checkForHit()
-
+  ngOnDestroy() {
+    // unsubscribe to ensure no memory leaks
+    this.subscription.unsubscribe();
+  }
 
 }
