@@ -30,7 +30,10 @@
     <div class="segment-section">
 
       <!-- search -->
-      <input type="text" class="custom-input" placeholder="Search for a table or a segment">
+      <form>
+        <input type="text" class="custom-input" placeholder="Search for a table or a segment"
+          (input)="searchEvent($event)">
+      </form>
       <!-- /search -->
 
       <!-- list -->
@@ -39,7 +42,7 @@
       </div>
 
       <div class="segment-scroll">
-        <div *ngFor="let segment of segmentList2" class="segment-item">
+        <div *ngFor="let segment of filteredSegmentList" class="segment-item">
           <ngx-emoji [emoji]="segment.icon.colons" [size]="17"></ngx-emoji>
           <span class="font-14px text-black ml-10px">
             {{segment.segmentName}}
