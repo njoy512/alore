@@ -1,6 +1,6 @@
 <div class="color-picker-box">
-  <div type="text" class="custom-input custom-input-lg py-7px" (click)="isOpen = !isOpen" cdkOverlayOrigin
-    #trigger="cdkOverlayOrigin">
+  <div type="text" class="custom-input custom-input-lg py-7px" [ngClass]="{'focus': isOpen}" (click)="isOpen = !isOpen"
+    cdkOverlayOrigin #trigger="cdkOverlayOrigin">
     <div class="color-input">
       <div [ngStyle]="{'background': color}" class="color-circle">
       </div>
