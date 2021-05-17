@@ -40,8 +40,8 @@ export class SideBarComponent implements OnInit {
   }
 
   // // to update tableList
-  // updateTableList(tableItem: any, segmentIndex: number) {
-  //   this.segmentList2[segmentIndex].tableList.push(tableItem);
-  // }
+  updateTableList(tableItem: any, segmentIndex: number) {
+    this.segmentList2[segmentIndex].tableList.push(tableItem);
+  }
 
 }

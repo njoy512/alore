@@ -1,0 +1,39 @@
+.container {
+  padding: 20px 50px;
+}
+
+.content-box {
+  border-top: 1px solid #CCCCCC;
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding-top: 30px;
+}
+
+.segment-item {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.table-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 50px 50px;
+}
+
+.ml-18px {
+  margin-left: 18px;
+}
+
+.pb-5px {
+  padding-bottom: 5px;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding: 10px 25px;
+  }
+}

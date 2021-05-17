@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="content-box">
+
+    <!-- segment list -->
+    <div *ngFor="let segment of segmentList; let i = index">
+      <div class="segment-item">
+        <ngx-emoji [emoji]="segment.icon.colons" [size]="31"></ngx-emoji>
+        <span class="font-30px text-black ml-18px pb-5px">
+          {{segment.segmentName}}
+        </span>
+      </div>
+
+      <div class="table-list">
+
+        <!-- table list -->
+        <div *ngFor="let item of segment.tableList">
+          <app-table-item [tableItem]="item"></app-table-item>
+        </div>
+        <!-- /table list -->
+
+        <!-- add table -->
+        <app-add-table-icon [segmentIndex]="i"></app-add-table-icon>
+        <!-- /add table -->
+
+      </div>
+    </div>
+    <!-- /segment list -->
+
+  </div>
+</div>
